@@ -1,0 +1,29 @@
+---
+import { siteConfig } from "../config";
+import ProjectsList from "../client_component/Project";
+const projects = siteConfig.projects ?? [];
+---
+{projects.length > 0 && (
+  <section id="projects" class="p-8 sm:p-12 md:p-16 lg:p-24">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16">
+
+          <div class="lg:col-span-4">
+            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+              Projects
+            </h2>
+            <div
+              class="w-[75px] h-[5px] mt-2 rounded-full"
+              style={`background-color: ${siteConfig.accentColor}`}
+            />
+          </div>
+
+      <div class="lg:col-span-8">
+        <ProjectsList
+          projects={projects}
+          accentColor={siteConfig.accentColor}
+          client:load
+        />
+      </div>
+    </div>
+  </section>
+)}
