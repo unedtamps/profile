@@ -25,22 +25,53 @@ import "../styles/global.css";
     />
     <title>{siteConfig.name} - {siteConfig.title}</title>
   </head>
-  <body>
-    <Header />
-    <section>
+  <body class="bg-white text-gray-900 min-h-screen relative overflow-x-hidden">
+    <div 
+        id="gradient-follower"
+        class="pointer-events-none fixed inset-0 z-20 transition-opacity duration-500 opacity-0"
+    >
+
+    </div>
+    <div class="relative z-10">
       <Hero />
-      <About />
-      <Experience />
-      <Projects />
-      <Education />
-    </section>
-    <Footer />
+    </div>
+    <div class="relative z-50">
+      <Header />
+      <section>
+        <About />
+        <Experience />
+        <Projects />
+        <Education />
+      </section>
+      <Footer />
+    </div>
   </body>
 
 <script>
 import AOS from 'aos';
 import 'aos/dist/aos.css'; 
 AOS.init({})
+const follower = document.getElementById('gradient-follower');
+
+    if (follower) {
+      follower.style.background = `
+        radial-gradient(
+          600px circle at var(--x) var(--y), 
+          ${"#1d4ed8"}1A,  
+          ${"#1d4ed8"}00 80% 
+        )
+      `;
+
+      window.addEventListener('mousemove', (e) => {
+        if (follower.style.opacity === '' || follower.style.opacity === '0') {
+          follower.style.opacity = '1';
+        }
+
+        follower.style.setProperty('--x', `${e.clientX}px`);
+        follower.style.setProperty('--y', `${e.clientY}px`);
+      });
+    }
 </script>
 </html>
+
 

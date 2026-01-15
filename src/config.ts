@@ -1,13 +1,13 @@
 export const siteConfig = {
   name: "Unedo Tampubolon",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  title: "Junior Software Engineer",
+  description: "Portfolio website of Unedo Tampubolon",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "unedo.tampubolon@gmail.com",
+    linkedin: "https://www.linkedin.com/in/unedo-tampubolon/",
+    twitter: "https://x.com/unedotamps",
+    github: "https://github.com/unedtamps/",
   },
   aboutMe:
     "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
@@ -65,6 +65,26 @@ export const siteConfig = {
         "Built and launched MVP product from scratch using React and Node.js",
         "Implemented CI/CD pipeline reducing deployment time by 60%",
         "Collaborated with product team to define technical requirements",
+      ],
+    },
+    {
+      company: "Digital Agency",
+      title: "Frontend Developer",
+      dateRange: "Aug 2018 - May 2020",
+      bullets: [
+        "Developed responsive web applications for 20+ clients",
+        "Improved site performance scores by 35% on average",
+        "Introduced modern JavaScript frameworks to legacy codebases",
+      ],
+    },
+    {
+      company: "Digital Agency",
+      title: "Frontend Developer",
+      dateRange: "Aug 2018 - May 2020",
+      bullets: [
+        "Developed responsive web applications for 20+ clients",
+        "Improved site performance scores by 35% on average",
+        "Introduced modern JavaScript frameworks to legacy codebases",
       ],
     },
     {
