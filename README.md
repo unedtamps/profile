@@ -1,187 +1,102 @@
-<img width="1943" height="1093" alt="image" src="https://github.com/user-attachments/assets/cc2ff955-17c2-48c7-81c8-479a0f061850" />
+# Profile - Personal Portfolio Website
 
-# DevPortfolio Template
+A modern and responsive personal portfolio website built with Astro, React, and Tailwind CSS. This portfolio is designed to showcase your skills, experience, projects, and education in a clean and interactive way.
 
-A modern, minimalist portfolio template built with Astro and Tailwind CSS. Perfect for developers looking to showcase their skills, experience, and projects in a clean, professional way.
+## Features
 
-This was completely rebuilt from the ground up from V1. This template was built to be entirely ready to go with a quick config edit (see below) but also provides the ability to easily extend in whatever way you want.
+- **Hero Section:** A captivating introduction to grab visitor's attention.
+- **About Section:** Share your story, skills, and what you're passionate about.
+- **Experience Section:** Detail your professional journey and accomplishments.
+- **Education Section:** Highlight your academic background.
+- **Projects Section:** Showcase your best work with descriptions and links.
+- **Responsive Design:** Optimized for various devices, from desktops to mobile phones.
+- **Animations:** Smooth scroll animations powered by AOS (Animate On Scroll) for an engaging user experience.
+- **Fast Performance:** Leveraging Astro for optimal performance and SEO.
 
-This template also comes with `CLAUDE.md` and `.cursor/rules` files for easy integration with your existing AI workflows.
+## Technologies Used
 
-> **📬 Connect & Share!**  
-> For questions and updates, feel free to reach out on [**X (Twitter)**](https://x.com/rfitzio).  
-> If you've built and published your personal site with this template, I'd love to see it! Send me a DM 🚀
+- [Astro](https://astro.build/) - The web framework for building fast, content-focused websites.
+- [React](https://reactjs.org/) - For building interactive UI components.
+- [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid styling.
+- [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/) - For declarative scroll animations.
 
-## Preview
+## Getting Started
 
-To view a live preview of the site, [click here](https://ryanfitzgerald.github.io/devportfolio/).
+Follow these instructions to get a copy of the project up and running on your local machine for development and testing purposes.
 
-## Built With
+### Prerequisites
 
-- **[Astro](https://astro.build/)** - Static site generator for modern web apps
-- **[Tailwind CSS v4](https://tailwindcss.com/)** - Utility-first CSS framework
-- **[Tabler Icons](https://tabler.io/icons)** - Free and open source icons
-- **TypeScript** - For type-safe configuration
+Make sure you have Node.js and npm (or yarn) installed on your machine.
 
-## Updating the Template
+- [Node.js](https://nodejs.org/en/download/) (LTS version recommended)
+- npm (comes with Node.js) or [Yarn](https://yarnpkg.com/getting-started/install)
 
-### Configuration
+### Installation
 
-The template is designed to be easily customizable through the `src/config.ts` file. This single file controls:
+1.  **Clone the repository:**
+    ```bash
+    git clone https://github.com/unedtamps/profile.git
+    cd devportfolio
+    ```
 
-- **Personal Information**: Name, title, description
-- **Accent Color**: Primary color theme (changing this will change the accent color site wide)
-- **Social Links**: Email, LinkedIn, Twitter, GitHub (all optional)
-- **About Section**: Personal bio/description
-- **Skills**: List of technical skills
-- **Projects**: Project showcase with descriptions and links
-- **Experience**: Work history with bullet points
-- **Education**: Educational background and achievements
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    # or if you use yarn
+    # yarn install
+    ```
 
-If skills, projects, experience, or education are removed from the config, those sections will be hidden entirely.
+### Development Server
 
-### Example structures
+To start the development server and see your changes in real-time:
 
-Here's what the config data structure looks like for each section:
-
-#### Basic Information
-```typescript
-name: "Your Name",
-title: "Your Job Title",
-description: "Brief site description",
-accentColor: "#1d4ed8", // Hex color for theme
-```
-
-#### Social Links (all optional)
-```typescript
-social: {
-  email: "your-email@example.com",
-  linkedin: "https://linkedin.com/in/yourprofile",
-  twitter: "https://twitter.com/yourprofile", 
-  github: "https://github.com/yourusername",
-}
-```
-
-#### About Section
-```typescript
-aboutMe: "A paragraph describing yourself, your background, interests, and what you're passionate about. This appears in the About section of your portfolio."
-```
-
-#### Skills
-```typescript
-skills: ["JavaScript", "React", "Node.js", "Python", "AWS", "Docker"]
-```
-
-#### Projects
-```typescript
-projects: [
-  {
-    name: "Project Name",
-    description: "Brief description of what the project does and its impact",
-    link: "https://github.com/yourusername/project",
-    skills: ["React", "Node.js", "AWS"], // Technologies used
-  }
-]
-```
-
-#### Experience
-```typescript
-experience: [
-  {
-    company: "Company Name",
-    title: "Your Job Title",
-    dateRange: "Jan 2022 - Present",
-    bullets: [
-      "Led development of microservices architecture serving 1M+ users",
-      "Reduced API response times by 40% through optimization",
-      "Mentored team of 5 junior developers",
-    ],
-  }
-]
-```
-
-#### Education
-```typescript
-education: [
-  {
-    school: "University Name",
-    degree: "Bachelor of Science in Computer Science",
-    dateRange: "2014 - 2018",
-    achievements: [
-      "Graduated Magna Cum Laude with 3.8 GPA",
-      "Dean's List all semesters",
-      "President of Computer Science Club"
-    ]
-  }
-]
-```
-
-### Icons
-
-The template uses [Tabler Icons](https://tabler.io/icons) for all icons. If you wish to add more icons and have it look consistent with what's already there, you can browse through their extensive icon library.
-
-## Project Structure
-
-```
-devportfolio/
-├── public/
-│   └── favicon.svg          # Site favicon
-├── src/
-│   ├── components/          # Astro components
-│   │   ├── About.astro      # About section
-│   │   ├── Education.astro  # Education section
-│   │   ├── Experience.astro # Work experience section
-│   │   ├── Footer.astro     # Site footer
-│   │   ├── Header.astro     # Navigation header
-│   │   ├── Hero.astro       # Hero/intro section
-│   │   └── Projects.astro   # Projects showcase
-│   ├── pages/
-│   │   └── index.astro      # Main page layout
-│   ├── styles/
-│   │   └── global.css       # Global styles
-│   └── config.ts            # Site configuration
-├── astro.config.mjs         # Astro configuration
-├── package.json             # Project dependencies
-├── tailwind.config.js       # Tailwind configuration
-└── tsconfig.json            # TypeScript configuration
-```
-
-## Local Development
-
-If you'd like to run it locally:
-
-```
-git clone https://github.com/RyanFitzgerald/devportfolio.git
-cd devportfolio
-npm install
-```
-
-After that, start up the Astro dev server with:
-
-```
+```bash
 npm run dev
+# or
+# yarn dev
+```
+
+The site will be available at `http://localhost:4321/`.
+
+### Building for Production
+
+To build the project for deployment:
+
+```bash
+npm run build
+# or
+# yarn build
+```
+
+This will generate a `dist/` directory with all the static assets and optimized code.
+
+### Preview Production Build
+
+You can preview the production build locally:
+
+```bash
+npm run preview
+# or
+# yarn preview
 ```
 
 ## Deployment
 
-The template can be deployed to any static hosting service easily (and in most cases, completely free). Here are some options:
+After running `npm run build`, the `dist/` folder contains all the necessary files for deployment. You can deploy this folder to any static site hosting service like Netlify, Vercel, GitHub Pages, etc.
 
-- To deploy with Netlify, [click here](https://docs.astro.build/en/guides/deploy/netlify/).
-- To deploy with Vercel, [click here](https://docs.astro.build/en/guides/deploy/vercel/).
-- To deploy with GitHub Pages, [click here](https://docs.astro.build/en/guides/deploy/github/).
-- To deploy with Cloudflare Pages, [click here](https://docs.astro.build/en/guides/deploy/cloudflare/).
-- To deploy with Render, [click here](https://docs.astro.build/en/guides/deploy/render/).
+## Customization
 
-Want to deploy somewhere else? Find more guides [here](https://docs.astro.build/en/guides/deploy/).
-
-## Changelog
-
-To view the changelog, see CHANGELOG.md.
+- **Content:** Update the `.astro` files in `src/components/` (e.g., `Hero.astro`, `About.astro`, `Projects.astro`) with your personal information, skills, and projects.
+- **Styling:** Modify `tailwind.config.mjs` and `src/styles/global.css` or component-specific styles to match your desired aesthetic.
+- **Configuration:** Adjust `astro.config.mjs` for any Astro-specific configurations.
+- **Animations:** Customize AOS animations in the relevant `.astro` components or `src/config.ts` if animation settings are centralized.
 
 ## License
 
-This project is fully and completely MIT. See LICENSE.md.
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details.
 
-## Questions?
+## Contact
 
-Feel free to reach out on [X (Twitter)](https://x.com/rfitzio) if you have any questions or need help.
+Feel free to connect with me!
+
+*(You might want to add links to your social media, email, or other contact methods here)*
