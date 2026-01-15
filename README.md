@@ -1,6 +1,5 @@
 # Profile - Personal Portfolio Website
 
-A modern and responsive personal portfolio website built with Astro, React, and Tailwind CSS. This portfolio is designed to showcase your skills, experience, projects, and education in a clean and interactive way.
 
 ## Features
 
@@ -98,5 +97,3 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Contact
 
 Feel free to connect with me!
-
-*(You might want to add links to your social media, email, or other contact methods here)*
