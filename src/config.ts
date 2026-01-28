@@ -52,7 +52,7 @@ export const siteConfig = {
       dateRange: "Dec 2025 - Jan 2026",
       contributors: "1",
       link: "https://movie-for-you.lovable.app/",
-      source: "https://github.com/unedtamps/api-movie-muse",
+      source: "https://movie-recommender.unedotampubolon.com/",
       skills: ["React JS", "Typescript", "Zustand"],
       preview: "/muse.png",
     },
@@ -92,7 +92,7 @@ export const siteConfig = {
         "Simple API provider get data from https://letterboxd.com and Movie Recommendation Model. Scrape lists of currently popular Letterboxd users, pull comprehensive movie diaries and written reviews from specific profiles. Access scraped film details and user activity through structured endpoints and get film recommendations based on user preferences and seed films. ",
       dateRange: "Dec 2025 - Jan 2026",
       contributors: "1",
-      source: "https://github.com/unedtamps/api-movie-muse",
+      source: "https://movie-muse-api.unedotampubolon.com/",
       skills: [
         "Python",
         "Flask",
