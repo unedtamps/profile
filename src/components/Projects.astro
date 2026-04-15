@@ -40,13 +40,10 @@ const hiddenProjects = projects.slice(visibleCount);
                 data-aos-delay={index * 100}
               >
                 <div
-                  {...linkProps}
-                  class={`block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 ${
-                    project.link ? "hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1" : ""
-                  }`}
+                  class={`block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1`}
                 >
                   {project.link && (
-                    <a href={project.link}>
+                    <a href={project.link} target="_blank" rel="noopener noreferrer">
                       <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
                         <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17" /></svg>
                       </div>
@@ -128,16 +125,15 @@ const hiddenProjects = projects.slice(visibleCount);
                         data-aos-delay={globalIndex * 100}
                       >
                         <div
-                          {...linkProps}
-                          class={`block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 ${
-                            project.link ? "hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1" : ""
-                          }`}
+                          class={`block relative p-4 sm:p-6 md:p-8 bg-gray-50 rounded-xl sm:rounded-2xl border border-gray-200 transition-all duration-300 hover:bg-white hover:shadow-xl hover:border-gray-300 hover:-translate-y-1`}
                         >
-                           {project.link && (
-                             <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
-                               <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17" /></svg>
-                             </div>
-                           )}
+{project.link && (
+                              <a href={project.link} target="_blank" rel="noopener noreferrer">
+                                <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
+                                  <svg class="w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 17L17 7M17 7H7M17 7V17" /></svg>
+                                </div>
+                              </a>
+                            )}
                            <div class="space-y-4">
                              <div>
                                <span class="text-sm font-mono" style={{ color: accentColor }}>0{globalIndex + 1}</span>
@@ -227,9 +223,9 @@ const hiddenProjects = projects.slice(visibleCount);
 )}
 
 <div id="image-modal" class="fixed inset-0 z-50 hidden">
-  <div class="absolute inset-0 bg-black/90 backdrop-blur-sm" id="modal-backdrop"></div>
+  <div class="absolute inset-0 bg-black/90 backdrop-blur-sm transition-opacity duration-300" id="modal-backdrop"></div>
   <div class="absolute inset-0 flex items-center justify-center p-4">
-    <div class="relative max-w-4xl w-full max-h-[90vh]">
+    <div class="relative max-w-4xl w-full max-h-[90vh] transition-transform duration-300 scale-95 opacity-0" id="modal-content">
       <button id="close-modal" class="absolute -top-12 right-0 text-white hover:text-gray-300 transition-colors">
         <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
@@ -282,25 +278,36 @@ const hiddenProjects = projects.slice(visibleCount);
   const modalCaption = document.getElementById('modal-caption');
   const closeModal = document.getElementById('close-modal');
   const modalBackdrop = document.getElementById('modal-backdrop');
+  const modalContent = document.getElementById('modal-content');
 
   document.querySelectorAll('.preview-btn').forEach(btn => {
     btn.addEventListener('click', (e) => {
       e.stopPropagation();
       const imgSrc = (btn as HTMLElement).dataset.img;
       const title = (btn as HTMLElement).dataset.title;
-      if (modal && modalImg && modalCaption && imgSrc && title) {
+      if (modal && modalImg && modalCaption && modalContent && imgSrc && title) {
         modalImg.src = imgSrc;
         modalCaption.textContent = title;
         modal.classList.remove('hidden');
         document.body.style.overflow = 'hidden';
+        setTimeout(() => {
+          modalBackdrop?.classList.remove('opacity-0');
+          modalContent?.classList.remove('scale-95', 'opacity-0');
+          modalContent?.classList.add('scale-100', 'opacity-100');
+        }, 10);
       }
     });
   });
 
   function closeImageModal() {
-    if (modal) {
-      modal.classList.add('hidden');
-      document.body.style.overflow = '';
+    if (modal && modalBackdrop && modalContent) {
+      modalBackdrop.classList.add('opacity-0');
+      modalContent.classList.remove('scale-100', 'opacity-100');
+      modalContent.classList.add('scale-95', 'opacity-0');
+      setTimeout(() => {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }, 300);
     }
   }
 

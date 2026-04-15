@@ -63,7 +63,7 @@ export const siteConfig = {
       dateRange: "Dec 2025 - Jan 2026",
       contributors: "1",
       source: "https://github.com/unedtamps/lensboxd-api",
-      link: "https://api.lensboxd.site",
+      link: "https://api.lensboxd.site/apidocs",
       skills: [
         "Python",
         "Flask",
@@ -82,6 +82,17 @@ export const siteConfig = {
       contributors: "6",
       skills: ["Node JS", "Typescript", "Express JS", "Prisma"],
       preview: "/sch.png",
+    },
+    {
+      name: "OrbitSearch",
+      description:
+        "This project provides a simple API gateway for searching content (movies, books, TV shows) through Jackett. It uses the go-jackett library to interact with a running Jackett instance and exposes a RESTful API.",
+      link: "https://orbit.unedotampubolon.com/",
+      dateRange: "Jan 2026 - Feb 2026",
+      source: "https://github.com/unedtamps/orbit",
+      contributors: "1",
+      skills: ["Go", "HTML", "CSS", "Torrent", "Javascript"],
+      preview: "./orbit.png",
     },
     {
       name: "Neural Style Transfer",
