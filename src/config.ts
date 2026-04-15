@@ -46,15 +46,32 @@ export const siteConfig = {
       preview: "/raihasa.png",
     },
     {
-      name: "Movie Muse",
+      name: "Lensboxd",
       description:
-        "Movie Muse is a web application that provides personalized movie recommendations. Users can get recommendations based on their Letterboxd username or by providing a list of seed movies. This Web Using API From  https://github.com/unedtamps/api-movie-muse",
+        "Lensboxd is a web application that provides personalized movie recommendations. Users can get recommendations based on their Letterboxd username or by providing a list of seed movies. This Web Using API From  https://github.com/unedtamps/lensboxd-api",
       dateRange: "Dec 2025 - Jan 2026",
       contributors: "1",
-      link: "https://movie-for-you.lovable.app/",
-      source: "https://github.com/unedtamps/api-movie-muse",
+      link: "https://lensboxd.site",
+      source: "https://github.com/unedtamps/lensboxd",
       skills: ["React JS", "Typescript", "Zustand"],
       preview: "/muse.png",
+    },
+    {
+      name: "API Letterboxd",
+      description:
+        "Simple API provider get data from https://letterboxd.com and Movie Recommendation Model. Scrape lists of currently popular Letterboxd users, pull comprehensive movie diaries and written reviews from specific profiles. Access scraped film details and user activity through structured endpoints and get film recommendations based on user preferences and seed films. ",
+      dateRange: "Dec 2025 - Jan 2026",
+      contributors: "1",
+      source: "https://github.com/unedtamps/lensboxd-api",
+      link: "https://api.lensboxd.site",
+      skills: [
+        "Python",
+        "Flask",
+        "Collaborative Filtering ALS",
+        "Playwright",
+        "Beautiful Soup",
+      ],
+      preview: "/api_muse.png",
     },
     {
       name: "Schematics 2024",
@@ -85,22 +102,6 @@ export const siteConfig = {
       source: "https://github.com/unedtamps/kp-nop-telkomsel",
       skills: ["Golang", "React JS", "LLM", "LangGraph", "Mapbox"],
       preview: "/canopy.png",
-    },
-    {
-      name: "API Movie Muse",
-      description:
-        "Simple API provider get data from https://letterboxd.com and Movie Recommendation Model. Scrape lists of currently popular Letterboxd users, pull comprehensive movie diaries and written reviews from specific profiles. Access scraped film details and user activity through structured endpoints and get film recommendations based on user preferences and seed films. ",
-      dateRange: "Dec 2025 - Jan 2026",
-      contributors: "1",
-      source: "https://github.com/unedtamps/api-movie-muse",
-      skills: [
-        "Python",
-        "Flask",
-        "Collaborative Filtering ALS",
-        "Playwright",
-        "Beautiful Soup",
-      ],
-      preview: "/api_muse.png",
     },
 
     {
