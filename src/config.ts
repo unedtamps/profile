@@ -17,24 +17,12 @@ export const siteConfig = {
     "Laravel PHP",
     "Golang",
     "Python",
-    "Mobile Developer (Kotlin & Java)",
-    "Data Science",
+    "RESTful APIs Design",
+    "Database Management",
     "Cloud Computing",
     "Docker & Kubernetes",
   ],
   projects: [
-    {
-      name: "Tunara",
-      description:
-        "Tunara is an innovative Android app that leverages AI-powered image analysis to accurately identify traditional Indonesian musical instruments. Built with Java and integrated with smart APIs, it allows users to capture images using their phone’s camera for real-time instrument recognition, making it a practical cultural education tool.  Tunara promotes the preservation and exploration of Indonesia’s musical heritage, ideal for education, cultural promotion, and personal discovery. My contribution was designing the application and building it from scratch using Java. My friend and I also built an AI for detection using Roboflow with the YOLO algorithm",
-
-      dateRange: "Jun 2025 - Jul 2025",
-      contributors: "3",
-      link: "https://drive.google.com/file/d/1grFAot_kDKyrm6FWmdI4hICE3luQzDlQ/view",
-      source: "https://github.com/unedtamps/tunara",
-      skills: ["Android", "XML", "Java", "Deep Learning", "YOLO"],
-      preview: "/tunara.png",
-    },
     {
       name: "Raihasa",
       dateRange: "Jul 2024 - Oct 2024",
@@ -46,6 +34,27 @@ export const siteConfig = {
       preview: "/raihasa.png",
     },
     {
+      name: "Canopy",
+      description:
+        "Fullstack Developer responsible for building internal web applications to support network operations at Telkomsel Surabaya. Developed frontend using React with integrated map providers to visualize network coverage and performance metrics through interactive maps and graphs, while designing and implementing backend services in Golang for data processing and API integration. Integrate Gemini API to create support chatbot, I contributed to the Golang backend, Gemini chatbot integration, and React JS initialization.",
+      dateRange: "Jul 2025 - Oct 2025",
+      contributors: "2",
+      source: "https://github.com/unedtamps/kp-nop-telkomsel",
+      skills: ["Golang", "React JS", "LLM", "LangGraph", "Mapbox"],
+      preview: "/canopy.png",
+    },
+    {
+      name: "CineVibe",
+      description:
+        "A real-time voice-based social platform for film enthusiasts, built as a Clubhouse-style audio app for live movie discussions. Users create themed rooms with movies sourced from TMDB, invite participants, and hold moderated voice conversations. Features include WebSocket-based signaling for hand raises and mic control, WebRTC audio via LiveKit Cloud, a role-based moderation system (master/speaker/listener), Google OAuth authentication with Redis session management, and a real-time presence system. The backend is built with Golang using Gin and gorilla/websocket, backed by PostgreSQL and Redis, while the frontend uses Next.js with TypeScript, Tailwind CSS, and shadcn/ui.",
+      dateRange: "May 2026 - June 2026",
+      contributors: "1",
+      link: "https://cinevibe.unedotampubolon.com",
+      source: "https://github.com/unedtamps/cinevibe",
+      skills: ["Next JS", "Typescript", "Websocket", "WebRTC", "Golang"],
+      preview: "/cinevibe.png",
+    },
+    {
       name: "Lensboxd",
       description:
         "Lensboxd is a web application that provides personalized movie recommendations. Users can get recommendations based on their Letterboxd username or by providing a list of seed movies. This Web Using API From  https://github.com/unedtamps/lensboxd-api",
@@ -55,6 +64,18 @@ export const siteConfig = {
       source: "https://github.com/unedtamps/lensboxd",
       skills: ["React JS", "Typescript", "Zustand"],
       preview: "/muse.png",
+    },
+    {
+      name: "Tunara",
+      description:
+        "Tunara is an innovative Android app that leverages AI-powered image analysis to accurately identify traditional Indonesian musical instruments. Built with Java and integrated with smart APIs, it allows users to capture images using their phone’s camera for real-time instrument recognition, making it a practical cultural education tool.  Tunara promotes the preservation and exploration of Indonesia’s musical heritage, ideal for education, cultural promotion, and personal discovery. My contribution was designing the application and building it from scratch using Java. My friend and I also built an AI for detection using Roboflow with the YOLO algorithm",
+
+      dateRange: "Jun 2025 - Jul 2025",
+      contributors: "3",
+      link: "https://drive.google.com/file/d/1grFAot_kDKyrm6FWmdI4hICE3luQzDlQ/view",
+      source: "https://github.com/unedtamps/tunara",
+      skills: ["Android", "XML", "Java", "Deep Learning", "YOLO"],
+      preview: "/tunara.png",
     },
     {
       name: "API Letterboxd",
@@ -103,16 +124,6 @@ export const siteConfig = {
       source: "https://github.com/unedtamps/neural-style-transfer.git",
       skills: ["CycleGAN", "DRIT++", "DeepLearning", "Pytorch"],
       preview: "/nst.png",
-    },
-    {
-      name: "Canopy",
-      description:
-        "Fullstack Developer responsible for building internal web applications to support network operations at Telkomsel Surabaya. Developed frontend using React with integrated map providers to visualize network coverage and performance metrics through interactive maps and graphs, while designing and implementing backend services in Golang for data processing and API integration. Integrate Gemini API to create support chatbot, I contributed to the Golang backend, Gemini chatbot integration, and React JS initialization.",
-      dateRange: "Jul 2025 - Oct 2025",
-      contributors: "2",
-      source: "https://github.com/unedtamps/kp-nop-telkomsel",
-      skills: ["Golang", "React JS", "LLM", "LangGraph", "Mapbox"],
-      preview: "/canopy.png",
     },
 
     {
@@ -173,9 +184,9 @@ export const siteConfig = {
     {
       school: "Sepuluh Nopember Institute of Technology (ITS)",
       degree: "Bachelor of Science in Computer Science",
-      dateRange: "2022 - 2026 (expected)",
+      dateRange: "2022 - 2026",
       achievements: [
-        "In Semester 8 with GPA 3.76/4.00",
+        "GPA: 3.79/4.00",
         "Relevant Coursework: Data Structures, Algorithms, Software Engineer, Database Systems, Cloud Computing, Deep Learning",
       ],
     },
