@@ -1,5 +1,66 @@
 @import "tailwindcss";
 
-body {
-  font-family: 'IBM Plex Mono', monospace;
+@theme {
+  --color-paper: #fafafa;
+  --color-ink: #0a0a0a;
+  --color-surface: #ffffff;
+  --color-muted: #52525b;
+  --color-accent: #1d4ed8;
+  --color-accent-dark: #1e40af;
+  --color-tint-blue: #e8edfb;
+  --color-tint-yellow: #fef3c7;
+
+  --font-display: "Archivo", ui-sans-serif, system-ui, sans-serif;
+  --font-sans: "Space Grotesk", ui-sans-serif, system-ui, sans-serif;
+}
+
+@utility shadow-hard {
+  box-shadow: 6px 6px 0 0 var(--color-ink);
+}
+
+@utility shadow-hard-sm {
+  box-shadow: 4px 4px 0 0 var(--color-ink);
+}
+
+@utility shadow-hard-accent {
+  box-shadow: 6px 6px 0 0 var(--color-accent);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    background-color: var(--color-paper);
+    color: var(--color-ink);
+    font-family: var(--font-sans);
+    -webkit-font-smoothing: antialiased;
+    overflow-wrap: break-word;
+  }
+
+  section[id] {
+    scroll-margin-top: 4.5rem;
+  }
+
+  ::selection {
+    background-color: var(--color-accent);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 3px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
 }

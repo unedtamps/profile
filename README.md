@@ -3,21 +3,19 @@
 
 ## Features
 
-- **Hero Section:** A captivating introduction to grab visitor's attention.
+- **Hero Section:** A sharp, bordered introduction with quick links and CV download.
 - **About Section:** Share your story, skills, and what you're passionate about.
-- **Experience Section:** Detail your professional journey and accomplishments.
+- **Projects Section:** Showcase featured work first, with the full list one click away.
+- **Experience Section:** Detail your professional journey in a two-column grid.
 - **Education Section:** Highlight your academic background.
-- **Projects Section:** Showcase your best work with descriptions and links.
 - **Responsive Design:** Optimized for various devices, from desktops to mobile phones.
-- **Animations:** Smooth scroll animations powered by AOS (Animate On Scroll) for an engaging user experience.
+- **Neo-Brutalist Design:** Heavy borders, hard offset shadows, bold typography.
 - **Fast Performance:** Leveraging Astro for optimal performance and SEO.
 
 ## Technologies Used
 
 - [Astro](https://astro.build/) - The web framework for building fast, content-focused websites.
-- [React](https://reactjs.org/) - For building interactive UI components.
 - [Tailwind CSS](https://tailwindcss.com/) - A utility-first CSS framework for rapid styling.
-- [AOS (Animate On Scroll)](https://michalsnik.github.io/aos/) - For declarative scroll animations.
 
 ## Getting Started
 
@@ -85,10 +83,9 @@ After running `npm run build`, the `dist/` folder contains all the necessary fil
 
 ## Customization
 
-- **Content:** Update the `.astro` files in `src/components/` (e.g., `Hero.astro`, `About.astro`, `Projects.astro`) with your personal information, skills, and projects.
-- **Styling:** Modify `tailwind.config.mjs` and `src/styles/global.css` or component-specific styles to match your desired aesthetic.
+- **Content:** Update `src/config.ts` with your personal information, skills, and projects.
+- **Styling:** Design tokens (colors, fonts, shadows) live in `src/styles/global.css` under `@theme`.
 - **Configuration:** Adjust `astro.config.mjs` for any Astro-specific configurations.
-- **Animations:** Customize AOS animations in the relevant `.astro` components or `src/config.ts` if animation settings are centralized.
 
 ## License
 

@@ -1,0 +1,32 @@
+---
+interface Props {
+  index: string;
+  eyebrow: string;
+  title: string;
+}
+
+const { index, eyebrow, title } = Astro.props;
+---
+
+<header>
+  <div class="flex flex-wrap items-center gap-3">
+    <span
+      class="border-2 border-ink bg-accent px-2 py-0.5 font-display text-xs font-black text-white shadow-hard-sm"
+    >
+      {index}
+    </span>
+    <span
+      class="font-display text-xs font-bold uppercase tracking-widest text-muted"
+    >
+      {eyebrow}
+    </span>
+  </div>
+
+  <h2
+    class="mt-4 font-display text-4xl font-black uppercase leading-none tracking-tight sm:text-5xl md:text-6xl"
+  >
+    {title}
+  </h2>
+
+  <div class="mt-4 h-1 w-full bg-ink"></div>
+</header>
